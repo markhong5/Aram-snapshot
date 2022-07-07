@@ -3,15 +3,17 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import os
+import discord
+from discord.ext import tasks
+import time
+import difflib
+import asyncpg
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import NoSuchElementException
 from riotwatcher import LolWatcher, ApiError
 from pprint import pprint
-import discord
 from dotenv import load_dotenv
-import time
-from selenium.common.exceptions import NoSuchElementException
-import difflib
 
 #like the selenium web driver, but is better at detecting adds
 os.environ["PATH"] += r"C:\Selenium Drivers\chromedriver_win32"
@@ -55,10 +57,10 @@ def update_snapshots(driver):
             f.write(champ)
             f.write("\n")
 
-def run_bot():
-    load_dotenv()
-    TOKEN = os.getenv('DISCORD_TOKEN')
-    client = discord.Client()
+
+
+
+def get_champ_list():
     champ_list = []
     with open("champion_list.txt", "r") as f:
         champ_string = f.read()
@@ -68,6 +70,38 @@ def run_bot():
         else:
             champ_list.append(champ)
     champ_list.append("wukong")
+    return champ_list
+
+class AramBot(discord.Client):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.champ_list = get_champ_list()
+        # an attribute we can access from our task
+        #self.counter = 0
+
+    # async def setup_hook(self) -> None:
+    #     # start the task to run in the background
+    #     self.update_champ_builds.start()
+
+    async def on_ready(self):
+        print(f'Logged in as {self.user} (ID: {self.user.id})')
+        print('------')
+
+    # @tasks.loop(hours=168)  # task runs every 7 days
+    # async def update_champ_builds(self):
+    #     driver = create_chrome_driver()
+    #     update_snapshots(driver)
+    #     driver.quit()
+
+    # @update_champ_builds.before_loop
+    # async def before_my_task(self):
+    #     await self.wait_until_ready()  # wait until the bot is ready
+
+
+def run_bot():
+    load_dotenv()
+    TOKEN = os.getenv('DISCORD_TOKEN')
+    client = AramBot()
 
     @client.event
     async def on_message(message):
@@ -75,15 +109,14 @@ def run_bot():
         if message.channel.id == 994681128965386241:
             if message.author == client.user:
                 return
-
-            if message.content[0] == "!":
+            if len(message.content) != 0 and message.content[0] == "!":
                 if message.author == "Kero#4827":
                     if message.content[1:] == "update":
                         driver = create_chrome_driver()
                         update_snapshots(driver)
                         driver.quit()
                 champ_name = message.content[1:]
-                close_matches = difflib.get_close_matches(champ_name, champ_list, n=3, cutoff=0.4)
+                close_matches = difflib.get_close_matches(champ_name, client.champ_list, n=3, cutoff=0.6)
                 if len(close_matches) > 0:
                     champ_name = close_matches[0]
                     if champ_name == "wukong":
@@ -92,18 +125,16 @@ def run_bot():
                     await message.channel.send(
                         file=discord.File(fr"C:\Users\overl\PycharmProjects\AramSnapshot\champ_snapshots\{champ_name}.png"))
                 else:
-                    await message.channel.send(f"could not find any close matches. Try:{difflib.get_close_matches(champ_name, champ_list, n=3, cutoff=0.1)}")
-
-
-
+                    await message.channel.send(f"could not find any close matches. Try:"
+                                               f"{difflib.get_close_matches(champ_name,  client.champ_list, n=3, cutoff=0.1)}")
     client.run(TOKEN)
-
 if __name__ == '__main__':
     # driver = create_chrome_driver()
     # create_aram_snapshot(driver, "aatrox")
     # #update_snapshots(driver)
     # driver.quit()
     run_bot()
+
 
 
 

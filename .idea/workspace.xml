@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d18e8715-dcf1-42a4-8d86-2a1dde5e3c1a" name="Changes" comment="Got the basic discord bot working ono the main server">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AramSnapshot.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="d18e8715-dcf1-42a4-8d86-2a1dde5e3c1a" name="Changes" comment="putting screen shots up">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657208690874</updated>
-      <workItem from="1657208696455" duration="13259000" />
+      <workItem from="1657208696455" duration="15728000" />
     </task>
     <task id="LOCAL-00001" summary="created a basic aram snap shot build in selenium">
       <created>1657213321150</created>
@@ -120,7 +117,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657222153174</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed a minor bug with git and pycharm">
+      <created>1657222588408</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657222588408</updated>
+    </task>
+    <task id="LOCAL-00008" summary="putting screen shots up">
+      <created>1657222691229</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657222691229</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,9 +153,11 @@
     <MESSAGE value="got the list of champions and their screenshots" />
     <MESSAGE value="updated the discord bot so it could take requests for champions" />
     <MESSAGE value="Got the basic discord bot working ono the main server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got the basic discord bot working ono the main server" />
+    <MESSAGE value="fixed a minor bug with git and pycharm" />
+    <MESSAGE value="putting screen shots up" />
+    <option name="LAST_COMMIT_MESSAGE" value="putting screen shots up" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AramSnapshot$main.coverage" NAME="main Coverage Results" MODIFIED="1657221063920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AramSnapshot$main.coverage" NAME="main Coverage Results" MODIFIED="1657226148614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
