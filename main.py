@@ -7,7 +7,6 @@ import discord
 from discord.ext import tasks
 import time
 import difflib
-import asyncpg
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
@@ -72,6 +71,12 @@ def get_champ_list():
     champ_list.append("wukong")
     return champ_list
 
+def update_snapshots():
+    print("Updating snapshots")
+    driver = create_chrome_driver()
+    update_snapshots(driver)
+    driver.quit()
+    print("Finished updating snapshots")
 class AramBot(discord.Client):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -79,23 +84,21 @@ class AramBot(discord.Client):
         # an attribute we can access from our task
         #self.counter = 0
 
-    # async def setup_hook(self) -> None:
-    #     # start the task to run in the background
-    #     self.update_champ_builds.start()
+    async def setup_hook(self) -> None:
+        # start the task to run in the background
+        self.update_champ_builds.start()
 
     async def on_ready(self):
         print(f'Logged in as {self.user} (ID: {self.user.id})')
         print('------')
 
-    # @tasks.loop(hours=168)  # task runs every 7 days
-    # async def update_champ_builds(self):
-    #     driver = create_chrome_driver()
-    #     update_snapshots(driver)
-    #     driver.quit()
+    @tasks.loop(hours=168)  # task runs every 7 days
+    async def update_champ_builds(self):
+       update_snapshots()
 
-    # @update_champ_builds.before_loop
-    # async def before_my_task(self):
-    #     await self.wait_until_ready()  # wait until the bot is ready
+    @update_champ_builds.before_loop
+    async def before_my_task(self):
+        await self.wait_until_ready()  # wait until the bot is ready
 
 
 def run_bot():
@@ -110,11 +113,9 @@ def run_bot():
             if message.author == client.user:
                 return
             if len(message.content) != 0 and message.content[0] == "!":
-                if message.author == "Kero#4827":
-                    if message.content[1:] == "update":
-                        driver = create_chrome_driver()
-                        update_snapshots(driver)
-                        driver.quit()
+                if message.author == "Kero#4827" and message.content[1:] == "update":
+                    update_snapshots()
+                    await message.channel.send(f"Updated Snapshots")
                 champ_name = message.content[1:]
                 close_matches = difflib.get_close_matches(champ_name, client.champ_list, n=3, cutoff=0.6)
                 if len(close_matches) > 0:
