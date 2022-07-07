@@ -15,7 +15,7 @@ import difflib
 
 #like the selenium web driver, but is better at detecting adds
 os.environ["PATH"] += r"C:\Selenium Drivers\chromedriver_win32"
-WINDOWSIZE = "1080,1080"
+WINDOWSIZE = "1600,1200"
 SCROLLSIZE = ".05"
 def create_chrome_driver():
     chrome_options = webdriver.ChromeOptions()
