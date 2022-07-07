@@ -15,7 +15,7 @@ import difflib
 
 #like the selenium web driver, but is better at detecting adds
 os.environ["PATH"] += r"C:\Selenium Drivers\chromedriver_win32"
-WINDOWSIZE = "1600,1200"
+WINDOWSIZE = "1080,1080"
 SCROLLSIZE = ".05"
 def create_chrome_driver():
     chrome_options = webdriver.ChromeOptions()
@@ -63,18 +63,25 @@ def run_bot():
     with open("champion_list.txt", "r") as f:
         champ_string = f.read()
     for champ in champ_string.split("\n"):
-        champ_list.append(champ)
-
+        if champ == "":
+            pass
+        else:
+            champ_list.append(champ)
     champ_list.append("wukong")
 
     @client.event
     async def on_message(message):
         #print(message.author)#Kero#4827
-        if message.channel.id == 994672415315607553:
+        if message.channel.id == 994681128965386241:
             if message.author == client.user:
                 return
 
             if message.content[0] == "!":
+                if message.author == "Kero#4827":
+                    if message.content[1:] == "update":
+                        driver = create_chrome_driver()
+                        update_snapshots(driver)
+                        driver.quit()
                 champ_name = message.content[1:]
                 close_matches = difflib.get_close_matches(champ_name, champ_list, n=3, cutoff=0.4)
                 if len(close_matches) > 0:
@@ -92,19 +99,12 @@ def run_bot():
     client.run(TOKEN)
 
 if __name__ == '__main__':
-    driver = create_chrome_driver()
-    #update_snapshots(driver)
-    driver.quit()
-    #run_bot()
-    # test = "drmundo dr_mundo"
-    #
-    # word = "dr MunDo"
-    # champ_list = []
-    # with open("champion_list.txt", "r") as f:
-    #     champ_string = f.read()
-    # for champ in champ_string.split("\n"):
-    #     champ_list.append(champ)
-    # print(difflib.get_close_matches(word, champ_list, n=3, cutoff=0.4))
+    # driver = create_chrome_driver()
+    # create_aram_snapshot(driver, "aatrox")
+    # #update_snapshots(driver)
+    # driver.quit()
+    run_bot()
+
 
 
 
