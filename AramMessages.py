@@ -7,6 +7,7 @@ VALUES = {
     "APEX": 2,
     "SPECIAL": 3,
     "UPDATE": 4,
+    "MMR":5,
     "NONE": -1,
 }
 SPECIAL = {"tyler":"aphelios", "jose":"bard", "gianni":"rengar", "soni":"akali"}
@@ -20,6 +21,9 @@ class AramMessage:
         if self.message.startswith("!"):
             if self.message[1:] in SPECIAL:
                 return VALUES["SPECIAL"]
+            elif self.message.startswith("!mmr"):
+                self.content = self.message.split()[1]
+                return VALUES["MMR"]
             else:
                 return VALUES["LEAGUE"]
         elif self.message.startswith("?"):

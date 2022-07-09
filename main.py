@@ -100,6 +100,19 @@ class AramBot(discord.Client):
         driver.quit()
         print("Finished updating snapshots")
 
+    def get_mmr(self, name):
+        driver = self.create_chrome_driver()
+        driver.get(fr"https://na.whatismymmr.com/{name}")
+        mmr = driver.find_element("xpath",
+                                  r"/html/body/container[2]/container[2]/container[1]/container/wrapper[2]/div[1]/span[1]").text
+        rank = driver.find_element("xpath",
+                                   r"/html/body/container[2]/container[2]/container[1]/container/wrapper[2]/div[3]").text
+        driver.quit()
+        if mmr != "N/A":
+            return f"Summoner: {name}\nMMR: {mmr}\nMMR is equivalent to {rank}"
+        else:
+            return "Could not find Summoner"
+
 def run_bot(champ_snapshot_path, chrome_driver_path):
     load_dotenv()
     TOKEN = os.getenv('DISCORD_TOKEN')
@@ -116,6 +129,9 @@ def run_bot(champ_snapshot_path, chrome_driver_path):
             type_of_message = aram_message.process_message()
             if type_of_message == VALUES["LEAGUE"]:
                 await message.channel.send(file=discord.File(aram_message.aram_snapshot(client.champ_list, client.champ_snapshot_path)))
+            elif type_of_message == VALUES["MMR"]:
+                mmr_message = client.get_mmr(aram_message.content)
+                await message.channel.send(mmr_message)
             elif type_of_message == VALUES["APEX"]:
                 load_dotenv()
                 APEX_TOKEN = os.getenv('APEX_API')
@@ -127,6 +143,7 @@ def run_bot(champ_snapshot_path, chrome_driver_path):
                 message.channel.send("Updating Snapshots")
                 client.update_snapshots()
                 await message.channel.send(f"Updated Snapshots")
+
     print("running client")
     client.run(TOKEN)
 if __name__ == '__main__':
