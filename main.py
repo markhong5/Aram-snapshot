@@ -13,11 +13,19 @@ from selenium.common.exceptions import NoSuchElementException
 from riotwatcher import LolWatcher, ApiError
 from pprint import pprint
 from dotenv import load_dotenv
-
+#LINUX
 #like the selenium web driver, but is better at detecting adds
-os.environ["PATH"] += r"C:\Selenium Drivers\chromedriver_win32"
+#need to change
+#WINDOWs = r"C:\Selenium Drivers\chromedriver_win32"
+os.environ["PATH"] += r"/lib/chromium-browser/chromedriver"
 WINDOWSIZE = "1080,1080"
 SCROLLSIZE = ".05"
+#linux: /home/mark/Desktop/python_apps/discord_bot/Aram-snapshot/champ_snapshots/{champ_name}.png
+#windows: C:\Users\overl\PycharmProjects\AramSnapshot\champ_snapshots\{champ_name}.png
+LINUX = R"/home/mark/Desktop/python_apps/discord_bot/Aram-snapshot/champ_snapshots/"
+#WINDOWS = R"C:\Users\overl\PycharmProjects\AramSnapshot\champ_snapshots\"
+
+
 def create_chrome_driver():
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('disable-notifications')
@@ -38,7 +46,7 @@ def create_aram_snapshot(driver, champ_name):
         pass
 
     driver.execute_script(f"window.scrollTo(0, document.body.scrollHeight * {SCROLLSIZE})")
-    driver.save_screenshot(fr"C:\Users\overl\PycharmProjects\AramSnapshot\champ_snapshots\{champ_name}.png")
+    driver.save_screenshot(LINUX + str(champ_name) + ".png")
 
 def update_snapshots(driver):
     load_dotenv()
@@ -114,19 +122,19 @@ def run_bot():
                 if message.author == "Kero#4827" and message.content[1:] == "update":
                     update_snapshots()
                     await message.channel.send(f"Updated Snapshots")
-                champ_name = message.content[1:]
-                close_matches = difflib.get_close_matches(champ_name, client.champ_list, n=3, cutoff=0.6)
-                if len(close_matches) > 0:
-                    champ_name = close_matches[0]
-                    if champ_name == "wukong":
-                        champ_name = "monkeyking"
-
-                    await message.channel.send(
-                        file=discord.File(fr"C:\Users\overl\PycharmProjects\AramSnapshot\champ_snapshots\{champ_name}.png"))
                 else:
-                    await message.channel.send(f"could not find any close matches. Try:"
-                                               f"{difflib.get_close_matches(champ_name,  client.champ_list, n=3, cutoff=0.1)}")
-    client.run(TOKEN)
+                    champ_name = message.content[1:]
+                    close_matches = difflib.get_close_matches(champ_name, client.champ_list, n=3, cutoff=0.6)
+                    if len(close_matches) > 0:
+                        champ_name = close_matches[0]
+                        if champ_name == "wukong":
+                            champ_name = "monkeyking"
+
+                        await message.channel.send(file=discord.File(LINUX + str(champ_name) + ".png"))
+                    else:
+                        await message.channel.send(f"could not find any close matches. Try:"
+                                                   f"{difflib.get_close_matches(champ_name,  client.champ_list, n=3, cutoff=0.1)}")
+        client.run(TOKEN)
 if __name__ == '__main__':
     # driver = create_chrome_driver()
     # create_aram_snapshot(driver, "aatrox")
