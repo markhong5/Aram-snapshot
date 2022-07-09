@@ -11,6 +11,7 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from riotwatcher import LolWatcher, ApiError
 from dotenv import load_dotenv
+from AramMessages import AramMessage, VALUES
 import requests
 
 
@@ -64,7 +65,7 @@ class AramBot(discord.Client):
         driver.execute_script(f"window.scrollTo(0, document.body.scrollHeight * {SCROLLSIZE})")
         driver.save_screenshot(os.path.join(self.champ_snapshot_path, str(champ_name) + ".png"))
 
-    def update_snapshots(self, driver):
+    def get_snapshots(self, driver):
         load_dotenv()
         API_KEY = os.getenv('LEAGUE_API')
         lol_watcher = LolWatcher(API_KEY)
@@ -95,7 +96,7 @@ class AramBot(discord.Client):
     def update_snapshots(self):
         print("Updating snapshots")
         driver = self.create_chrome_driver()
-        self.update_snapshots(driver)
+        self.get_snapshots(driver)
         driver.quit()
         print("Finished updating snapshots")
 
@@ -110,37 +111,22 @@ def run_bot(champ_snapshot_path, chrome_driver_path):
         if message.channel.id == 994681128965386241 and len(message.content) != 0:
             if message.author == client.user:
                 return
-            if message.content.startswith("!"):
-                if message.author == "Kero#4827" and message.content[1:] == "update":
-                    print("running update")
-                    client.update_snapshots()
-                    await message.channel.send(f"Updated Snapshots")
-                elif message.content[1:] == "tyler":
-                    await message.channel.send(
-                        file=discord.File(os.path.join(client.champ_snapshot_path, "aphelios" + ".png")))
-                else:
-                    champ_name = message.content[1:]
-                    close_matches = difflib.get_close_matches(champ_name, client.champ_list, n=3, cutoff=0.6)
-                    if len(close_matches) > 0:
-                        champ_name = close_matches[0]
-                        if champ_name == "wukong":
-                            champ_name = "monkeyking"
 
-                        await message.channel.send(
-                            file=discord.File(os.path.join(client.champ_snapshot_path, str(champ_name) + ".png")))
-                    else:
-                        await message.channel.send(f"could not find any close matches. Try:"
-                                                   f"{difflib.get_close_matches(champ_name,  client.champ_list, n=3, cutoff=0.1)}")
-            elif message.content.startswith("?map"):
+            aram_message = AramMessage(message.author, message.content)
+            type_of_message = aram_message.process_message()
+            if type_of_message == VALUES["LEAGUE"]:
+                await message.channel.send(file=discord.File(aram_message.aram_snapshot(client.champ_list, client.champ_snapshot_path)))
+            elif type_of_message == VALUES["APEX"]:
                 load_dotenv()
                 APEX_TOKEN = os.getenv('APEX_API')
-                response = requests.get(f"https://api.mozambiquehe.re/maprotation?auth={APEX_TOKEN}")
-                time.sleep(.5)
-                map_info = response.json()
-                current_map = map_info["current"]["map"]
-                remaining_time = map_info["current"]["remainingTimer"]
-                next_map = map_info["next"]["map"]
-                await message.channel.send(f"Current Map: {current_map}\nTime Remaining: {remaining_time}\nNext Map: {next_map}")
+                await message.channel.send(aram_message.apex_map(APEX_TOKEN))
+            elif type_of_message == VALUES["SPECIAL"]:
+                await message.channel.send(file=discord.File(aram_message.special_message(client.champ_snapshot_path)))
+            elif type_of_message == VALUES["UPDATE"]:
+                print("running update")
+                message.channel.send("Updating Snapshots")
+                client.update_snapshots()
+                await message.channel.send(f"Updated Snapshots")
     print("running client")
     client.run(TOKEN)
 if __name__ == '__main__':
