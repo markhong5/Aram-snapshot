@@ -81,8 +81,6 @@ class AramBot(discord.Client):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.champ_list = get_champ_list()
-        # an attribute we can access from our task
-        #self.counter = 0
 
     async def setup_hook(self) -> None:
         # start the task to run in the background
@@ -94,7 +92,7 @@ class AramBot(discord.Client):
 
     @tasks.loop(hours=168)  # task runs every 7 days
     async def update_champ_builds(self):
-       update_snapshots()
+        update_snapshots()
 
     @update_champ_builds.before_loop
     async def before_my_task(self):
