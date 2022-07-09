@@ -134,7 +134,8 @@ def run_bot():
                     else:
                         await message.channel.send(f"could not find any close matches. Try:"
                                                    f"{difflib.get_close_matches(champ_name,  client.champ_list, n=3, cutoff=0.1)}")
-        client.run(TOKEN)
+    print("running client")
+    client.run(TOKEN)
 if __name__ == '__main__':
     # driver = create_chrome_driver()
     # create_aram_snapshot(driver, "aatrox")
