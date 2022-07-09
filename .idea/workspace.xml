@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d18e8715-dcf1-42a4-8d86-2a1dde5e3c1a" name="Changes" comment="Arambot should self update once per week">
-      <change afterPath="$PROJECT_DIR$/linux_run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/windows_run.py" afterDir="false" />
+    <list default="true" id="d18e8715-dcf1-42a4-8d86-2a1dde5e3c1a" name="Changes" comment="made aram bot a class, which can take different paths based on where the drivers are located">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -115,8 +113,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.windows_run" />
-        <item itemvalue="Python.linux_run" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.linux_run" />
       </list>
     </recent_temporary>
   </component>
@@ -130,7 +128,7 @@
       <updated>1657208690874</updated>
       <workItem from="1657208696455" duration="19125000" />
       <workItem from="1657329563276" duration="2555000" />
-      <workItem from="1657374724603" duration="909000" />
+      <workItem from="1657374724603" duration="2729000" />
     </task>
     <task id="LOCAL-00001" summary="created a basic aram snap shot build in selenium">
       <created>1657213321150</created>
@@ -209,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657329581514</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="made aram bot a class, which can take different paths based on where the drivers are located">
+      <created>1657375765965</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1657375765965</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,10 +240,12 @@
     <MESSAGE value="putting screen shots up" />
     <MESSAGE value="made arambot a class, commented out code that would update aram bot 1 per week" />
     <MESSAGE value="Arambot should self update once per week" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arambot should self update once per week" />
+    <MESSAGE value="made aram bot a class, which can take different paths based on where the drivers are located" />
+    <option name="LAST_COMMIT_MESSAGE" value="made aram bot a class, which can take different paths based on where the drivers are located" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AramSnapshot$windows_run.coverage" NAME="windows_run Coverage Results" MODIFIED="1657375402755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/AramSnapshot$main.coverage" NAME="main Coverage Results" MODIFIED="1657375330932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AramSnapshot$windows_run.coverage" NAME="windows_run Coverage Results" MODIFIED="1657381813860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AramSnapshot$linux_run.coverage" NAME="linux_run Coverage Results" MODIFIED="1657375673141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AramSnapshot$main.coverage" NAME="main Coverage Results" MODIFIED="1657381806652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

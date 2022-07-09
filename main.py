@@ -11,6 +11,9 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from riotwatcher import LolWatcher, ApiError
 from dotenv import load_dotenv
+import requests
+
+
 WINDOWSIZE = "1080,1080"
 SCROLLSIZE = ".05"
 
@@ -104,13 +107,17 @@ def run_bot(champ_snapshot_path, chrome_driver_path):
     @client.event
     async def on_message(message):
         #print(message.author)#Kero#4827
-        if message.channel.id == 994681128965386241:
+        if message.channel.id == 994681128965386241 and len(message.content) != 0:
             if message.author == client.user:
                 return
-            if len(message.content) != 0 and message.content[0] == "!":
+            if message.content.startswith("!"):
                 if message.author == "Kero#4827" and message.content[1:] == "update":
+                    print("running update")
                     client.update_snapshots()
                     await message.channel.send(f"Updated Snapshots")
+                elif message.content[1:] == "tyler":
+                    await message.channel.send(
+                        file=discord.File(os.path.join(client.champ_snapshot_path, "aphelios" + ".png")))
                 else:
                     champ_name = message.content[1:]
                     close_matches = difflib.get_close_matches(champ_name, client.champ_list, n=3, cutoff=0.6)
@@ -124,10 +131,26 @@ def run_bot(champ_snapshot_path, chrome_driver_path):
                     else:
                         await message.channel.send(f"could not find any close matches. Try:"
                                                    f"{difflib.get_close_matches(champ_name,  client.champ_list, n=3, cutoff=0.1)}")
+            elif message.content.startswith("?map"):
+                load_dotenv()
+                APEX_TOKEN = os.getenv('APEX_API')
+                response = requests.get(f"https://api.mozambiquehe.re/maprotation?auth={APEX_TOKEN}")
+                time.sleep(.5)
+                map_info = response.json()
+                current_map = map_info["current"]["map"]
+                remaining_time = map_info["current"]["remainingTimer"]
+                next_map = map_info["next"]["map"]
+                await message.channel.send(f"Current Map: {current_map}\nTime Remaining: {remaining_time}\nNext Map: {next_map}")
     print("running client")
     client.run(TOKEN)
 if __name__ == '__main__':
     pass
+    # load_dotenv()
+    # APEX_TOKEN = os.getenv('APEX_API')
+    # response = requests.get(f"https://api.mozambiquehe.re/maprotation?auth={APEX_TOKEN}")
+    # from pprint import pprint
+    # pprint(response.json()["current"]["map"])
+    # '        "remainingTimer": "01:21:25"\n'
     # driver = create_chrome_driver()
     # create_aram_snapshot(driver, "aatrox")
     # #update_snapshots(driver)
