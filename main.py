@@ -49,7 +49,7 @@ class AramBot(discord.Client):
         # chrome_options.add_argument("start-maximized");
         chrome_options.add_argument("headless")
         chrome_options.add_argument(f"--window-size={WINDOWSIZE}")
-        driver = webdriver.Chrome(options=chrome_options)
+        driver = webdriver.Chrome(options=chrome_options, executable_path=os.environ["PATH"])
         return driver
 
     def create_aram_snapshot(self, driver, champ_name):
