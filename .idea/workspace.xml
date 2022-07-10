@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d18e8715-dcf1-42a4-8d86-2a1dde5e3c1a" name="Changes" comment="added soni to the secrets list">
-      <change afterPath="$PROJECT_DIR$/AramMmr.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AramMessages.py" beforeDir="false" afterPath="$PROJECT_DIR$/AramMessages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +152,8 @@
       <workItem from="1657208696455" duration="19125000" />
       <workItem from="1657329563276" duration="2555000" />
       <workItem from="1657374724603" duration="5677000" />
-      <workItem from="1657390019187" duration="1236000" />
+      <workItem from="1657390019187" duration="3608000" />
+      <workItem from="1657462017989" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="created a basic aram snap shot build in selenium">
       <created>1657213321150</created>
@@ -254,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657384568920</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added soni to the secrets list">
+      <created>1657391389293</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1657391389293</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +292,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="added soni to the secrets list" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AramSnapshot$windows_run.coverage" NAME="windows_run Coverage Results" MODIFIED="1657391208707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AramSnapshot$windows_run.coverage" NAME="windows_run Coverage Results" MODIFIED="1657391335712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AramSnapshot$linux_run.coverage" NAME="linux_run Coverage Results" MODIFIED="1657375673141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AramSnapshot$main.coverage" NAME="main Coverage Results" MODIFIED="1657381806652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AramSnapshot$AramMmr.coverage" NAME="AramMmr Coverage Results" MODIFIED="1657391138509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

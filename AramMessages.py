@@ -22,11 +22,12 @@ class AramMessage:
             if self.message[1:] in SPECIAL:
                 return VALUES["SPECIAL"]
             elif self.message.startswith("!mmr"):
-                self.content = self.message.split()[1]
+                #correct way
+                self.content = " ".join(self.message.split()[1:])
                 return VALUES["MMR"]
             else:
                 return VALUES["LEAGUE"]
-        elif self.message.startswith("?"):
+        elif self.message.startswith("?map"):
             return VALUES["APEX"]
         elif self.message == "~update" and self.author == "Kero#4827":
             return VALUES["UPDATE"]
