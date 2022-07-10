@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d18e8715-dcf1-42a4-8d86-2a1dde5e3c1a" name="Changes" comment="added soni to the secrets list">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AramMessages.py" beforeDir="false" afterPath="$PROJECT_DIR$/AramMessages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +152,7 @@
       <workItem from="1657329563276" duration="2555000" />
       <workItem from="1657374724603" duration="5677000" />
       <workItem from="1657390019187" duration="3608000" />
-      <workItem from="1657462017989" duration="10000" />
+      <workItem from="1657462017989" duration="97000" />
     </task>
     <task id="LOCAL-00001" summary="created a basic aram snap shot build in selenium">
       <created>1657213321150</created>
@@ -260,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657391389293</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added soni to the secrets list">
+      <created>1657462041823</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1657462041823</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

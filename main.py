@@ -111,7 +111,8 @@ class AramBot(discord.Client):
         if mmr != "N/A":
             return f"Summoner: {name}\nMMR: {mmr}\nMMR is equivalent to {rank}"
         else:
-            return "Could not find Summoner"
+
+            return f"Could not find summoner {name} ARAM MMR"
 
 def run_bot(champ_snapshot_path, chrome_driver_path):
     load_dotenv()
