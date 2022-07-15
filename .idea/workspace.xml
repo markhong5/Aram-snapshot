@@ -4,8 +4,172 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d18e8715-dcf1-42a4-8d86-2a1dde5e3c1a" name="Changes" comment="added soni to the secrets list">
+    <list default="true" id="d18e8715-dcf1-42a4-8d86-2a1dde5e3c1a" name="Changes" comment="made the error message for update snapshots more clear">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AramMessages.py" beforeDir="false" afterPath="$PROJECT_DIR$/AramMessages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/aatrox.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/aatrox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/ahri.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/ahri.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/akali.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/akali.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/akshan.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/akshan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/alistar.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/alistar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/amumu.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/amumu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/anivia.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/anivia.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/annie.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/annie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/aphelios.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/aphelios.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/ashe.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/ashe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/aurelionsol.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/aurelionsol.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/azir.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/azir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/bard.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/bard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/belveth.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/belveth.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/blitzcrank.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/blitzcrank.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/brand.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/brand.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/braum.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/braum.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/caitlyn.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/caitlyn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/camille.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/camille.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/cassiopeia.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/cassiopeia.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/chogath.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/chogath.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/corki.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/corki.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/darius.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/darius.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/diana.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/diana.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/draven.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/draven.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/drmundo.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/drmundo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/ekko.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/ekko.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/elise.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/elise.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/evelynn.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/evelynn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/ezreal.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/ezreal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/fiddlesticks.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/fiddlesticks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/fiora.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/fiora.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/fizz.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/fizz.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/galio.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/galio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/gangplank.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/gangplank.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/garen.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/garen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/gnar.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/gnar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/gragas.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/gragas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/graves.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/graves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/gwen.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/gwen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/hecarim.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/hecarim.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/heimerdinger.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/heimerdinger.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/illaoi.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/illaoi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/irelia.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/irelia.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/ivern.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/ivern.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/janna.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/janna.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/jarvaniv.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/jarvaniv.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/jax.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/jax.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/jayce.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/jayce.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/jhin.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/jhin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/jinx.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/jinx.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/kaisa.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/kaisa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/kalista.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/kalista.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/karma.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/karma.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/karthus.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/karthus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/kassadin.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/kassadin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/katarina.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/katarina.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/kayle.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/kayle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/kayn.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/kayn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/kennen.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/kennen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/khazix.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/khazix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/kindred.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/kindred.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/kled.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/kled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/kogmaw.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/kogmaw.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/leblanc.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/leblanc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/leesin.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/leesin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/leona.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/leona.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/lillia.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/lillia.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/lissandra.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/lissandra.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/lucian.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/lucian.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/lulu.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/lulu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/lux.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/lux.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/malphite.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/malphite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/malzahar.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/malzahar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/maokai.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/maokai.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/masteryi.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/masteryi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/missfortune.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/missfortune.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/monkeyking.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/monkeyking.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/mordekaiser.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/mordekaiser.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/morgana.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/morgana.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/nami.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/nami.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/nasus.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/nasus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/nautilus.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/nautilus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/neeko.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/neeko.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/nidalee.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/nidalee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/nocturne.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/nocturne.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/nunu.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/nunu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/olaf.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/olaf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/orianna.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/orianna.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/ornn.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/ornn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/pantheon.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/pantheon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/poppy.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/poppy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/pyke.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/pyke.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/qiyana.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/qiyana.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/quinn.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/quinn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/rakan.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/rakan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/rammus.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/rammus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/reksai.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/reksai.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/rell.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/rell.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/renata.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/renata.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/renekton.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/renekton.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/rengar.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/rengar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/riven.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/riven.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/rumble.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/rumble.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/ryze.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/ryze.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/samira.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/samira.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/sejuani.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/sejuani.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/senna.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/senna.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/seraphine.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/seraphine.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/sett.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/sett.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/shaco.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/shaco.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/shen.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/shen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/shyvana.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/shyvana.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/singed.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/singed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/sion.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/sion.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/sivir.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/sivir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/skarner.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/skarner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/sona.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/sona.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/soraka.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/soraka.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/swain.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/swain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/sylas.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/sylas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/syndra.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/syndra.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/tahmkench.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/tahmkench.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/taliyah.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/taliyah.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/talon.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/talon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/taric.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/taric.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/teemo.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/teemo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/thresh.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/thresh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/tristana.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/tristana.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/trundle.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/trundle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/tryndamere.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/tryndamere.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/twistedfate.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/twistedfate.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/twitch.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/twitch.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/udyr.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/udyr.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/urgot.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/urgot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/varus.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/varus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/vayne.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/vayne.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/veigar.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/veigar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/velkoz.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/velkoz.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/vex.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/vex.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/vi.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/vi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/viego.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/viego.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/viktor.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/viktor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/vladimir.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/vladimir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/volibear.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/volibear.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/warwick.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/warwick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/xayah.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/xayah.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/xerath.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/xerath.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/xinzhao.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/xinzhao.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/yasuo.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/yasuo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/yone.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/yone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/yorick.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/yorick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/yuumi.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/yuumi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/zac.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/zac.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/zed.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/zed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/zeri.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/zeri.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/ziggs.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/ziggs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/zilean.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/zilean.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/zoe.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/zoe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champ_snapshots/zyra.png" beforeDir="false" afterPath="$PROJECT_DIR$/champ_snapshots/zyra.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/champion_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/champion_list.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows_run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +316,8 @@
       <workItem from="1657329563276" duration="2555000" />
       <workItem from="1657374724603" duration="5677000" />
       <workItem from="1657390019187" duration="3608000" />
-      <workItem from="1657462017989" duration="97000" />
+      <workItem from="1657462017989" duration="411000" />
+      <workItem from="1657915740570" duration="807000" />
     </task>
     <task id="LOCAL-00001" summary="created a basic aram snap shot build in selenium">
       <created>1657213321150</created>
@@ -266,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657462041823</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="made the error message for update snapshots more clear">
+      <created>1657462132821</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1657462132821</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,10 +467,11 @@
     <MESSAGE value="made aram bot a class, which can take different paths based on where the drivers are located" />
     <MESSAGE value="got the apex maps working" />
     <MESSAGE value="added soni to the secrets list" />
-    <option name="LAST_COMMIT_MESSAGE" value="added soni to the secrets list" />
+    <MESSAGE value="made the error message for update snapshots more clear" />
+    <option name="LAST_COMMIT_MESSAGE" value="made the error message for update snapshots more clear" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AramSnapshot$windows_run.coverage" NAME="windows_run Coverage Results" MODIFIED="1657391335712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AramSnapshot$windows_run.coverage" NAME="windows_run Coverage Results" MODIFIED="1657916105182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AramSnapshot$linux_run.coverage" NAME="linux_run Coverage Results" MODIFIED="1657375673141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AramSnapshot$main.coverage" NAME="main Coverage Results" MODIFIED="1657381806652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AramSnapshot$AramMmr.coverage" NAME="AramMmr Coverage Results" MODIFIED="1657391138509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

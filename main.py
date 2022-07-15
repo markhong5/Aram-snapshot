@@ -66,7 +66,9 @@ class AramBot(discord.Client):
         driver.save_screenshot(os.path.join(self.champ_snapshot_path, str(champ_name) + ".png"))
 
     def get_snapshots(self, driver):
-        open('file.txt', 'w').close()
+        with open("champion_list.txt", "r+") as f:
+            f.truncate(0)
+            #clears the champ file
         load_dotenv()
         API_KEY = os.getenv('LEAGUE_API')
         lol_watcher = LolWatcher(API_KEY)
@@ -148,7 +150,7 @@ def run_bot(champ_snapshot_path, chrome_driver_path):
                 print("running update")
                 await message.channel.send("Updating Snapshots")
                 client.update_snapshots()
-                await message.channel.send(f"Updated Snapshots")
+                await message.channel.send(f"Snapshots are Updated")
 
     print("running client")
     client.run(TOKEN)

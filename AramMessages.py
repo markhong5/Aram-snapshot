@@ -43,7 +43,7 @@ class AramMessage:
                 champ_name = "monkeyking"
             return os.path.join(champ_snapshot_path, str(champ_name) + ".png")
         else:
-            return f"could not find any close matches. Try:{set(difflib.get_close_matches(champ_name, champ_list, n=3, cutoff=0.3))}"
+            return f"could not find any close matches. Try:{difflib.get_close_matches(champ_name, champ_list, n=3, cutoff=0.3)}"
 
     def special_message(self, champ_snapshot_path):
         return os.path.join(champ_snapshot_path, SPECIAL[self.content] + ".png")
