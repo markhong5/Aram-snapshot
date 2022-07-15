@@ -66,6 +66,7 @@ class AramBot(discord.Client):
         driver.save_screenshot(os.path.join(self.champ_snapshot_path, str(champ_name) + ".png"))
 
     def get_snapshots(self, driver):
+        open('file.txt', 'w').close()
         load_dotenv()
         API_KEY = os.getenv('LEAGUE_API')
         lol_watcher = LolWatcher(API_KEY)
@@ -129,7 +130,11 @@ def run_bot(champ_snapshot_path, chrome_driver_path):
             aram_message = AramMessage(message.author, message.content)
             type_of_message = aram_message.process_message()
             if type_of_message == VALUES["LEAGUE"]:
-                await message.channel.send(file=discord.File(aram_message.aram_snapshot(client.champ_list, client.champ_snapshot_path)))
+                file_name = aram_message.aram_snapshot(client.champ_list, client.champ_snapshot_path)
+                try:
+                    await message.channel.send(file=discord.File(file_name))
+                except FileNotFoundError:
+                    await message.channel.send(file_name)
             elif type_of_message == VALUES["MMR"]:
                 mmr_message = client.get_mmr(aram_message.content)
                 await message.channel.send(mmr_message)
@@ -141,7 +146,7 @@ def run_bot(champ_snapshot_path, chrome_driver_path):
                 await message.channel.send(file=discord.File(aram_message.special_message(client.champ_snapshot_path)))
             elif type_of_message == VALUES["UPDATE"]:
                 print("running update")
-                message.channel.send("Updating Snapshots")
+                await message.channel.send("Updating Snapshots")
                 client.update_snapshots()
                 await message.channel.send(f"Updated Snapshots")
 
