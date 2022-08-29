@@ -8,6 +8,7 @@ from discord.ext import tasks
 import time
 import difflib
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException
 from riotwatcher import LolWatcher, ApiError
 from dotenv import load_dotenv
@@ -22,34 +23,38 @@ SCROLLSIZE = ".05"
 
 class AramBot(discord.Client):
     def __init__(self, champ_snapshot_path, chrome_driver_path, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        intents = discord.Intents.all()
+        super().__init__(intents=intents, *args, **kwargs)
         self.champ_list = self.get_champ_list()
         self.champ_snapshot_path = champ_snapshot_path
-        os.environ["PATH"] = chrome_driver_path
+        #os.environ["PATH"] = chrome_driver_path
 
-    async def setup_hook(self) -> None:
-        # start the task to run in the background
-        self.update_champ_builds.start()
+    # async def setup_hook(self) -> None:
+    #     # start the task to run in the background
+    #     self.update_champ_builds.start()
 
     async def on_ready(self):
         print(f'Logged in as {self.user} (ID: {self.user.id})')
         print('------')
 
-    @tasks.loop(hours=168)  # task runs every 7 days
-    async def update_champ_builds(self):
-        self.update_snapshots()
+    # @tasks.loop(hours=168)  # task runs every 7 days
+    # async def update_champ_builds(self):
+    #     self.update_snapshots()
 
-    @update_champ_builds.before_loop
-    async def before_my_task(self):
-        await self.wait_until_ready()  # wait until the bot is ready
+    # @update_champ_builds.before_loop
+    # async def before_my_task(self):
+    #     await self.wait_until_ready()  # wait until the bot is ready
 
     def create_chrome_driver(self):
-        chrome_options = webdriver.ChromeOptions()
+        chrome_options = Options()
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--disable-dev-shm-usage')
         chrome_options.add_argument('disable-notifications')
         # chrome_options.add_argument("start-maximized");
         chrome_options.add_argument("headless")
         chrome_options.add_argument(f"--window-size={WINDOWSIZE}")
-        driver = webdriver.Chrome(options=chrome_options, executable_path=os.environ["PATH"])
+        #driver = webdriver.Chrome(options=chrome_options, executable_path=os.environ["PATH"])
+        driver = webdriver.Chrome(options=chrome_options)
         return driver
 
     def create_aram_snapshot(self, driver, champ_name):
@@ -70,7 +75,7 @@ class AramBot(discord.Client):
             f.truncate(0)
             #clears the champ file
         load_dotenv()
-        API_KEY = os.getenv('LEAGUE_API')
+        API_KEY = os.environ['LEAGUE_API']
         lol_watcher = LolWatcher(API_KEY)
         my_region = 'na1'
         versions = lol_watcher.data_dragon.versions_for_region(my_region)
@@ -118,31 +123,35 @@ class AramBot(discord.Client):
             return f"Could not find summoner {name} ARAM MMR"
 
 def run_bot(champ_snapshot_path, chrome_driver_path):
-    load_dotenv()
-    TOKEN = os.getenv('DISCORD_TOKEN')
+    #load_dotenv(find_dotenv())
+    TOKEN = os.environ['DISCORD_TOKEN']
+    assert type(TOKEN) == str
     client = AramBot(champ_snapshot_path, chrome_driver_path)
 
     @client.event
     async def on_message(message):
-        #print(message.author)#Kero#4827
+        #print(message.author)
+        #Kero#4827
         if message.channel.id == 994681128965386241 and len(message.content) != 0:
             if message.author == client.user:
                 return
-
+            print(message.author)
             aram_message = AramMessage(message.author, message.content)
             type_of_message = aram_message.process_message()
             if type_of_message == VALUES["LEAGUE"]:
+
                 file_name = aram_message.aram_snapshot(client.champ_list, client.champ_snapshot_path)
                 try:
                     await message.channel.send(file=discord.File(file_name))
                 except FileNotFoundError:
+                    print("file not found")
                     await message.channel.send(file_name)
             elif type_of_message == VALUES["MMR"]:
                 mmr_message = client.get_mmr(aram_message.content)
                 await message.channel.send(mmr_message)
             elif type_of_message == VALUES["APEX"]:
                 load_dotenv()
-                APEX_TOKEN = os.getenv('APEX_API')
+                APEX_TOKEN = os.environ['APEX_API']
                 await message.channel.send(aram_message.apex_map(APEX_TOKEN))
             elif type_of_message == VALUES["SPECIAL"]:
                 await message.channel.send(file=discord.File(aram_message.special_message(client.champ_snapshot_path)))
@@ -151,6 +160,12 @@ def run_bot(champ_snapshot_path, chrome_driver_path):
                 await message.channel.send("Updating Snapshots")
                 client.update_snapshots()
                 await message.channel.send(f"Snapshots are Updated")
+                
+            elif type_of_message == VALUES["NONE"]:
+                 await message.channel.send(f"Not an ARAM BOT Command")
+        else:
+            print("INVALID MESSAGE")
+                
 
     print("running client")
     client.run(TOKEN)
