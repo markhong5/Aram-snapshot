@@ -8,9 +8,11 @@ VALUES = {
     "SPECIAL": 3,
     "UPDATE": 4,
     "MMR":5,
+    "TIME":6,
+    "INT":7,
     "NONE": -1,
 }
-SPECIAL = {"tyler":"aphelios", "jose":"bard", "gianni":"rengar", "soni":"akali"}
+SPECIAL = {"tyler":"aphelios", "jose":"bard", "gianni":"rengar", "soni":"akali", "luigi":"riven", "shravan":"gangplank"}
 class AramMessage:
     def __init__(self, author, message):
         self.author = str(author)
@@ -31,6 +33,10 @@ class AramMessage:
             return VALUES["APEX"]
         elif self.message == "~update" and self.author == "Kero#4827":
             return VALUES["UPDATE"]
+        elif self.message == "?time":
+            return VALUES["TIME"]
+        elif self.message == "?intlist":
+            return VALUES["INT"]
         else:
             return VALUES["NONE"]
 
